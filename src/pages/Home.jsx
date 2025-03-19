@@ -1,22 +1,21 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import SearchBar from "../components/SearchBar";
-import AboutUs from "../components/AboutUs";
-import "../styles.css";
 
-const Home = () => {
+function Home() {
   return (
     <div>
       <Header />
-      <main>
-        {/* <h2>Welcome to My Website</h2>
-        <SearchBar /> */}
-        <AboutUs />
-      </main>
+      <h1>Welcome to AutoDocX!</h1>
+      <p>Explore our amazing AutodocX :</p>
+      <Link to="/about-us">
+        <button>About Us</button>
+      </Link>
       <Footer />
     </div>
   );
-};
+}
 
 export default Home;
