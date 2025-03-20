@@ -1,13 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
-
-
-
 
 export default function AboutUs() {
   return (
@@ -17,20 +10,22 @@ export default function AboutUs() {
       
       {/* Description Section */}
       <p className="lead text-center text-muted">
-        AutoDocX is an innovative **Software Engineering tool** that automates documentation generation 
-        for GitHub repositories. It simplifies the process of understanding large codebases by adding 
-        meaningful comments and creating structured documentation effortlessly.
+        AutoDocX is a cutting-edge **Software Documentation Tool** that leverages advanced code analysis 
+        and **Large Language Models (LLMs)** to automatically generate high-quality documentation for your 
+        GitHub repositories. It takes the complexity out of understanding and documenting codebases, making it easier 
+        to share, maintain, and collaborate on projects.
       </p>
 
       {/* Features Section */}
       <div className="mt-5">
         <h3 className="fw-bold">🔹 Key Features</h3>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">📌 **Automatic Code Commenting** – Analyzes and generates insightful comments for each function & class.</li>
-          <li className="list-group-item">📌 **Comprehensive Documentation** – Generates detailed API and module documentation.</li>
-          <li className="list-group-item">📌 **GitHub Integration** – Directly fetches repositories and processes them.</li>
-          <li className="list-group-item">📌 **Customizable Output** – Choose the format of documentation (Markdown, HTML, PDF).</li>
-          <li className="list-group-item">📌 **Supports Multiple Languages** – Works with JavaScript, Python, C++, and more.</li>
+          <li className="list-group-item">📌 **Automated Documentation Generation** – Uses LLMs and code analysis to create well-structured documentation from your GitHub repositories.</li>
+          <li className="list-group-item">📌 **Code Commenting with AI** – Automatically adds meaningful comments to your code, improving its readability.</li>
+          <li className="list-group-item">📌 **Comprehensive Documentation Output** – Generates detailed API documentation, class descriptions, and module overviews.</li>
+          <li className="list-group-item">📌 **Seamless GitHub Integration** – Directly integrates with GitHub to fetch your repository and analyze the code.</li>
+          <li className="list-group-item">📌 **Customizable Documentation Formats** – Choose from Markdown, HTML, or PDF formats to suit your needs.</li>
+          <li className="list-group-item">📌 **Multilingual Support** – Supports JavaScript, Python, C++, and other major programming languages.</li>
         </ul>
       </div>
 
@@ -38,14 +33,14 @@ export default function AboutUs() {
       <div className="mt-5">
         <h3 className="fw-bold">🛠️ Technology Stack</h3>
         <p>
-          AutoDocX is built using **modern web technologies** for scalability and performance:
+          AutoDocX utilizes a modern technology stack to provide powerful and efficient documentation generation:
         </p>
         <ul>
-          <li>🌍 **Frontend**: React.js, Bootstrap</li>
-          <li>⚙️ **Backend**: Node.js, Express.js</li>
-          <li>📄 **Database**: MongoDB</li>
-          <li>🔍 **AI/ML**: NLP-based code analysis for intelligent commenting</li>
-          <li>📡 **APIs**: GitHub API for repository fetching</li>
+          <li>🌍 **Frontend**: React.js, Bootstrap for responsive design</li>
+          <li>⚙️ **Backend**: Node.js, Express.js for scalable server-side processing</li>
+          <li>📄 **Database**: MongoDB for storing user data and configuration</li>
+          <li>🔍 **AI/ML**: Leveraging NLP (Natural Language Processing) and LLMs for intelligent code analysis and documentation generation</li>
+          <li>📡 **APIs**: GitHub API to fetch and analyze repositories</li>
         </ul>
       </div>
 
@@ -53,22 +48,24 @@ export default function AboutUs() {
       <div className="mt-5">
         <h3 className="fw-bold">🚀 Why Choose AutoDocX?</h3>
         <p>
-          Developers often struggle with **poor documentation** and **uncommented codebases**. AutoDocX eliminates 
-          these problems by providing **instant, well-structured, and easy-to-read documentation**.  
+          Writing documentation can be time-consuming and tedious, especially for large projects. AutoDocX helps solve this by automating the documentation process using advanced code analysis and LLMs, giving you more time to focus on development. 
         </p>
         <ul>
-          <li>⚡ **Saves Time** – No need to manually write documentation.</li>
-          <li>💡 **Improves Code Readability** – Makes projects easy to understand.</li>
-          <li>📚 **Boosts Collaboration** – Team members can quickly grasp the codebase.</li>
-          <li>🛠 **Open-Source Friendly** – Helps maintainers manage public repositories.</li>
+          <li>⚡ **Automates Documentation** – No need to manually write documentation for your code.</li>
+          <li>💡 **Improves Code Understanding** – Makes your codebase easy to understand for both new and existing team members.</li>
+          <li>📚 **Enhances Collaboration** – Well-documented code fosters better collaboration and communication among developers.</li>
+          <li>🔍 **Powerful AI Insights** – Intelligent comments and documentation generated by LLMs improve code clarity.</li>
+          <li>🛠 **Open-Source Friendly** – Great for open-source projects that require consistent and clear documentation.</li>
         </ul>
       </div>
 
       {/* Call to Action */}
       <div className="text-center mt-5">
         <h3>Ready to Automate Your Documentation?</h3>
-        <p>Try AutoDocX today and experience hassle-free documentation generation!</p>
-        <a href="#" className="btn btn-primary btn-lg">Get Started</a>
+        <p>Try AutoDocX today and generate high-quality documentation with ease!</p>
+        <Link to="/get-started">
+          <a href="#" className="btn btn-primary btn-lg">Get Started</a>
+        </Link>
       </div>
     </div>
   );
