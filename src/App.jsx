@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./components/AboutUs"; 
 import Features from "./components/Features"; 
 import Layout from "./components/Layout"; 
+import SearchBar from "./components/SearchBar";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Routes>
          
           <Route path="/" element={<AboutUs />} />
-         
+          <Route path="/searchbar" element={<SearchBar />} />
           <Route path="/features" element={<Features />} />
         </Routes>
       </Layout>
