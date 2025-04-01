@@ -56,14 +56,14 @@
     margin: 20px 0;
   }
   
-  .search-container input {
+  .search-bar input {
     width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
   }
   
-  .search-container button {
+  .search-bar button {
     padding: 10px 15px;
     border: none;
     background-color: #007bff;
