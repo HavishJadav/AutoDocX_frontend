@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="shadow-sm custom-navbar">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold fs-3 custom-brand">
+        <Navbar.Brand as={Link} to="/" className=" fw-bold fs-3 custom-brand">
           AutoDocX
         </Navbar.Brand>
 
