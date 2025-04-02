@@ -1,72 +1,91 @@
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import "./AboutUs.css";
 
 export default function AboutUs() {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 about-container">
       {/* Title Section */}
-      <h1 className="text-center fw-bold mb-4">About AutoDocX</h1>
+      <header className="text-center mb-5">
+        <h1 className="fw-bold about-title">About AutoDocX</h1>
+        <p className="lead about-subtitle">Automate Your Documentation with Ease</p>
+      </header>
       
       {/* Description Section */}
-      <p className="lead text-center text-muted">
-        AutoDocX is a cutting-edge **Software Documentation Tool** that leverages advanced code analysis 
-        and **Large Language Models (LLMs)** to automatically generate high-quality documentation for your 
-        GitHub repositories. It takes the complexity out of understanding and documenting codebases, making it easier 
-        to share, maintain, and collaborate on projects.
-      </p>
+      <section className="about-description mb-5">
+        <p className="lead text-center text-muted">
+          AutoDocX is a cutting-edge <strong>Software Documentation Tool</strong> that leverages advanced code analysis 
+          and <strong>Large Language Models (LLMs)</strong> to automatically generate high-quality documentation for your 
+          GitHub repositories. It takes the complexity out of understanding and documenting codebases, making it easier 
+          to share, maintain, and collaborate on projects.
+        </p>
+      </section>
 
       {/* Features Section */}
-      <div className="mt-5">
-        <h3 className="fw-bold">🔹 Key Features</h3>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">📌 **Automated Documentation Generation** – Uses LLMs and code analysis to create well-structured documentation from your GitHub repositories.</li>
-          <li className="list-group-item">📌 **Code Commenting with AI** – Automatically adds meaningful comments to your code, improving its readability.</li>
-          <li className="list-group-item">📌 **Comprehensive Documentation Output** – Generates detailed API documentation, class descriptions, and module overviews.</li>
-          <li className="list-group-item">📌 **Seamless GitHub Integration** – Directly integrates with GitHub to fetch your repository and analyze the code.</li>
-          <li className="list-group-item">📌 **Customizable Documentation Formats** – Choose from Markdown, HTML, or PDF formats to suit your needs.</li>
-          <li className="list-group-item">📌 **Multilingual Support** – Supports JavaScript, Python, C++, and other major programming languages.</li>
+      <section className="mb-5">
+        <h3 className="fw-bold mb-3">🔹 Key Features</h3>
+        <ul className="list-group list-group-flush feature-list">
+          <li className="list-group-item">
+            📌 <strong>Automated Documentation Generation</strong> – Uses LLMs and code analysis to create well-structured documentation from your GitHub repositories.
+          </li>
+          <li className="list-group-item">
+            📌 <strong>Code Commenting with AI</strong> – Automatically adds meaningful comments to your code, improving its readability.
+          </li>
+          <li className="list-group-item">
+            📌 <strong>Comprehensive Documentation Output</strong> – Generates detailed API documentation, class descriptions, and module overviews.
+          </li>
+          <li className="list-group-item">
+            📌 <strong>Seamless GitHub Integration</strong> – Directly integrates with GitHub to fetch your repository and analyze the code.
+          </li>
+          <li className="list-group-item">
+            📌 <strong>Customizable Documentation Formats</strong> – Choose from Markdown, HTML, or PDF formats to suit your needs.
+          </li>
+          <li className="list-group-item">
+            📌 <strong>Multilingual Support</strong> – Supports JavaScript, Python, C++, and other major programming languages.
+          </li>
         </ul>
-      </div>
+      </section>
 
       {/* Technology Stack */}
-      <div className="mt-5">
-        <h3 className="fw-bold">🛠️ Technology Stack</h3>
+      <section className="mb-5">
+        <h3 className="fw-bold mb-3">🛠️ Technology Stack</h3>
         <p>
           AutoDocX utilizes a modern technology stack to provide powerful and efficient documentation generation:
         </p>
-        <ul>
-          <li>🌍 **Frontend**: React.js, Bootstrap for responsive design</li>
-          <li>⚙️ **Backend**: Node.js, Express.js for scalable server-side processing</li>
-          <li>📄 **Database**: MongoDB for storing user data and configuration</li>
-          <li>🔍 **AI/ML**: Leveraging NLP (Natural Language Processing) and LLMs for intelligent code analysis and documentation generation</li>
-          <li>📡 **APIs**: GitHub API to fetch and analyze repositories</li>
+        <ul className="list-group list-group-flush tech-stack-list">
+          <li className="list-group-item">🌍 <strong>Frontend</strong>: React.js, Bootstrap for responsive design</li>
+          <li className="list-group-item">⚙️ <strong>Backend</strong>: Node.js, Express.js for scalable server-side processing</li>
+          <li className="list-group-item">📄 <strong>Database</strong>: MongoDB for storing user data and configuration</li>
+          <li className="list-group-item">🔍 <strong>AI/ML</strong>: Leveraging NLP and LLMs for intelligent code analysis and documentation generation</li>
+          <li className="list-group-item">📡 <strong>APIs</strong>: GitHub API to fetch and analyze repositories</li>
         </ul>
-      </div>
+      </section>
 
       {/* Why Choose AutoDocX? */}
-      <div className="mt-5">
-        <h3 className="fw-bold">🚀 Why Choose AutoDocX?</h3>
+      <section className="mb-5">
+        <h3 className="fw-bold mb-3">🚀 Why Choose AutoDocX?</h3>
         <p>
-          Writing documentation can be time-consuming and tedious, especially for large projects. AutoDocX helps solve this by automating the documentation process using advanced code analysis and LLMs, giving you more time to focus on development. 
+          Writing documentation can be time-consuming and tedious, especially for large projects. AutoDocX helps solve this by automating the documentation process using advanced code analysis and LLMs, giving you more time to focus on development.
         </p>
-        <ul>
-          <li>⚡ **Automates Documentation** – No need to manually write documentation for your code.</li>
-          <li>💡 **Improves Code Understanding** – Makes your codebase easy to understand for both new and existing team members.</li>
-          <li>📚 **Enhances Collaboration** – Well-documented code fosters better collaboration and communication among developers.</li>
-          <li>🔍 **Powerful AI Insights** – Intelligent comments and documentation generated by LLMs improve code clarity.</li>
-          <li>🛠 **Open-Source Friendly** – Great for open-source projects that require consistent and clear documentation.</li>
+        <ul className="list-group list-group-flush why-choose-list">
+          <li className="list-group-item">⚡ <strong>Automates Documentation</strong> – No need to manually write documentation for your code.</li>
+          <li className="list-group-item">💡 <strong>Improves Code Understanding</strong> – Makes your codebase easy to understand for both new and existing team members.</li>
+          <li className="list-group-item">📚 <strong>Enhances Collaboration</strong> – Well-documented code fosters better collaboration and communication among developers.</li>
+          <li className="list-group-item">🔍 <strong>Powerful AI Insights</strong> – Intelligent comments and documentation generated by LLMs improve code clarity.</li>
+          <li className="list-group-item">🛠 <strong>Open-Source Friendly</strong> – Great for open-source projects that require consistent and clear documentation.</li>
         </ul>
-      </div>
+      </section>
 
       {/* Call to Action */}
-      <div className="text-center mt-5">
-        <h3>Ready to Automate Your Documentation?</h3>
-        <p>Try AutoDocX today and generate high-quality documentation with ease!</p>
-        <Link to="/get-started">
-          <a href="#" className="btn btn-primary btn-lg">Get Started</a>
+      <section className="text-center mt-5">
+        <h3 className="mb-3">Ready to Automate Your Documentation?</h3>
+        <p className="mb-4">Try AutoDocX today and generate high-quality documentation with ease!</p>
+        <Link to="/get-started" className="btn btn-primary btn-lg get-started-btn">
+          Get Started
         </Link>
-      </div>
+      </section>
     </div>
   );
 }

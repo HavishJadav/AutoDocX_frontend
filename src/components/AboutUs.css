@@ -1,0 +1,57 @@
+
+
+.about-container {
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+  }
+ 
+  .about-title {
+    color: #2c3e50;
+    font-size: 2.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+  }
+  
+  
+  .about-description p {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+
+  .feature-list .list-group-item,
+  .tech-stack-list .list-group-item,
+  .why-choose-list .list-group-item {
+    background-color: #f9f9f9;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px 20px;
+    border-radius: 5px;
+  }
+  
+  .feature-list .list-group-item:hover,
+  .tech-stack-list .list-group-item:hover,
+  .why-choose-list .list-group-item:hover {
+    transform: translateX(10px);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .get-started-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px 30px;
+    font-size: 1.125rem;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+  }
+  
