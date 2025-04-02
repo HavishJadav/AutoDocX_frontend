@@ -1,10 +1,14 @@
+// File: src/components/Header.jsx
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Header() {
+  const { isAuthenticated, loginWithRedirect, logout, user, isLoading } = useAuth0();
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="shadow-sm">
       <Container>
@@ -16,16 +20,59 @@ export default function Header() {
 
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" className="mx-2">Home</Nav.Link>
-            <Nav.Link as={Link} to="/features" className="mx-2">Features</Nav.Link>
-            <Nav.Link as={Link} to="/searchbar" className="mx-2">Upload Repo</Nav.Link>
-            <Nav.Link href="#" className="mx-2">Docs</Nav.Link>
+            <Nav.Link as={Link} to="/" className="mx-2">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/features" className="mx-2">
+              Features
+            </Nav.Link>
+            <Nav.Link as={Link} to="/searchbar" className="mx-2">
+              Upload Repo
+            </Nav.Link>
+            <Nav.Link href="#" className="mx-2">
+              Docs
+            </Nav.Link>
           </Nav>
 
           <Nav className="ms-3">
-            <Nav.Link href="https://github.com/" target="_blank" className="text-white fs-4">
+            <Nav.Link
+              href="https://github.com/"
+              target="_blank"
+              className="text-white fs-4"
+            >
               <FaGithub />
             </Nav.Link>
+          </Nav>
+
+          <Nav className="ms-3 align-items-center">
+            {isLoading && <span className="text-white mx-2">Loading...</span>}
+
+            {isAuthenticated && user && (
+              <>
+                <span className="text-info fw-bold fs-6 mx-2">{user.email}</span>
+                <Button
+                  variant="outline-info"
+                  size="sm"
+                  className="mx-2 rounded-pill"
+                  onClick={() =>
+                    logout({ logoutParams: { returnTo: window.location.origin } })
+                  }
+                >
+                  Log Out
+                </Button>
+              </>
+            )}
+
+            {!isAuthenticated && !isLoading && (
+              <Button
+                variant="outline-info"
+                size="sm"
+                className="mx-2 rounded-pill"
+                onClick={() => loginWithRedirect()}
+              >
+                Log In
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
