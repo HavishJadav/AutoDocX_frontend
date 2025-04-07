@@ -30,7 +30,7 @@ export default function Header() {
             <Nav.Link as={Link} to="/searchbar" className="mx-2 custom-nav-link">
               Upload Repo
             </Nav.Link>
-            <Nav.Link href="#" className="mx-2 custom-nav-link">
+            <Nav.Link as={Link} to="/docs" className="mx-2 custom-nav-link">
               Docs
             </Nav.Link>
           </Nav>
